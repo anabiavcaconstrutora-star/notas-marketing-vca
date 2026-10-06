@@ -378,7 +378,7 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
     </form>
     <div id="setupBox" class="setup-box" hidden>
       <p><b>Falta ligar o sistema ao banco de dados.</b></p>
-      <p>Abra o arquivo <code>config.js</code> desta pasta e cole a <b>Project URL</b> e a <b>chave pública</b> do seu projeto no Supabase (o passo a passo está no GUIA). Depois envie a pasta de novo para a Netlify.</p>
+      <p>Abra o arquivo <code>config.js</code> desta pasta e cole a <b>Project URL</b> e a <b>chave pública</b> do seu projeto no Supabase (o passo a passo está no GUIA). Depois envie os arquivos de novo para o site.</p>
     </div>
     <div id="authMsg" class="auth-msg" hidden></div>
   </div>
@@ -553,7 +553,7 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
 <script src="config.js"></script>
-<script src="vendor/supabase.js"></script>
+<script src="supabase.js"></script>
 <script>
 (() => {
 'use strict';
@@ -561,11 +561,11 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
 /* ---------- constantes ---------- */
 const LOGO = document.querySelector('.brand img').src;
 const CDN = {
-  pdf: 'vendor/pdf.min.js',
-  pdfWorker: new URL('vendor/pdf.worker.min.js', location.href).href,
-  jspdf: 'vendor/jspdf.umd.min.js',
-  autotable: 'vendor/jspdf.plugin.autotable.min.js',
-  xlsx: 'vendor/xlsx.full.min.js'
+  pdf: 'pdf.min.js',
+  pdfWorker: new URL('pdf.worker.min.js', location.href).href,
+  jspdf: 'jspdf.umd.min.js',
+  autotable: 'jspdf.plugin.autotable.min.js',
+  xlsx: 'xlsx.full.min.js'
 };
 const DEFAULT_CATS = ['Mídia paga e tráfego','Gráfica e impressos','Produção audiovisual','Fotografia','Eventos e stands','Brindes','Agência e freelancers','Influenciadores','Mídia exterior (outdoor)','Ferramentas e assinaturas','Outros'];
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
@@ -1669,7 +1669,8 @@ function onConfig(c) {
 async function boot() {
   render();
   const url = String(CFG.supabaseUrl || ''), key = String(CFG.supabaseAnonKey || '');
-  if (!window.supabase || !/^https:\/\//.test(url) || key.length < 20 || /COLE/.test(url + key)) { showAuth('setup'); return; }
+  if (!/^https:\/\//.test(url) || key.length < 20 || /COLE/.test(url + key)) { showAuth('setup'); return; }
+  if (!window.supabase) { showAuth('setup'); $('#setupBox').innerHTML = '<p><b>Falta um arquivo no site.</b></p><p>O arquivo <code>supabase.js</code> não foi encontrado. Envie de novo todos os arquivos da pasta <code>site</code>, sem esquecer nenhum.</p>'; return; }
   sb = window.supabase.createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
   store = SupaStore;
   const recovering = /type=recovery/.test(location.hash);
