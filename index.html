@@ -313,6 +313,95 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
 .setup-box code{font-family:var(--f-mono);font-size:12.5px;color:var(--neon)}
 .badge.equipe i{background:var(--neon);box-shadow:0 0 8px var(--neon)}
 
+
+/* Abas */
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font-weight:700;font-size:14.5px;padding:10px 14px 11px;margin-bottom:-1px}
+.tabs button:hover{color:var(--fg)}
+.tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--neon)}
+.view-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 20px;flex-wrap:wrap;margin-bottom:16px}
+.view-head h2{margin:0;font-family:var(--f-display);font-weight:500;font-size:22px;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:anywhere}
+.view-head p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.back{display:block;background:none;border:0;color:var(--neon);font-weight:700;font-size:13px;padding:0 0 8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:700;color:var(--muted)}
+.chip:hover{color:var(--fg)}
+.chip.on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.ev-card{display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:15px 16px;color:inherit;min-width:0}
+.ev-card:hover{border-color:var(--neon-mid)}
+.ev-name{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--neon);overflow-wrap:anywhere}
+.ev-total{font-size:21px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.ev-meta{font-size:12px;color:var(--muted)}
+.ev-card .bar-track{margin-top:4px}
+.ev-card.zero{background:transparent;border-style:dashed}
+.ev-card.zero .ev-name{color:var(--muted)}
+.ev-card.zero .ev-total{font-size:14px;color:var(--muted);font-weight:600}
+.ev-card.sem .ev-name{color:var(--warn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kpi.main{background:linear-gradient(160deg,#0f1612,#0a0d0c);border-color:var(--line-2)}
+.kpi-l{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi-v{font-size:22px;font-weight:800;letter-spacing:-.01em;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.kpi.main .kpi-v{color:var(--neon);font-size:26px}
+.kpi-s{font-size:12px;color:var(--muted)}
+.dash-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:18px}
+.dash-grid .span2{grid-column:1/-1}
+.filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;gap:8px;margin-bottom:16px;align-items:end}
+.filters .in{width:100%}
+.filters .in:disabled{opacity:.45}
+.btn-ghost:disabled{opacity:.4;cursor:default}
+.evo svg{width:100%;height:auto;display:block}
+.evo .b{fill:var(--neon-mid);cursor:pointer}
+.evo .b:hover{fill:var(--neon)}
+.evo .b.on{fill:var(--neon)}
+.evo .b0{fill:var(--line-2);cursor:pointer}
+.evo .gl{stroke:var(--line);stroke-width:1}
+.evo .ax{fill:var(--muted);font-size:11px;font-family:var(--f-body);font-weight:600}
+.evo .ax.on{fill:var(--fg);font-weight:800}
+.evo .vl{fill:var(--fg);font-size:11px;font-family:var(--f-body);font-weight:800;text-anchor:middle}
+.bar-btn{display:block;width:calc(100% + 12px);background:none;border:0;padding:4px 6px;margin:-4px -6px;border-radius:8px;text-align:left;color:inherit}
+.bar-btn:hover{background:var(--surface-2)}
+.bar-btn:hover .bar-k{color:var(--neon)}
+.sec-title{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:6px 0 10px}
+.rep-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.rel-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+.rel-form h3{margin-top:22px}
+.rel-form h3:first-child{margin-top:0}
+.rel-form .in{width:100%;max-width:440px}
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.choice{display:flex;flex-direction:column;gap:4px;text-align:left;background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:12px 13px;color:inherit}
+.choice:hover{border-color:var(--muted)}
+.choice b{font-size:14.5px}
+.choice span{font-size:12px;color:var(--muted);line-height:1.35}
+.choice.on{border-color:var(--neon);box-shadow:inset 0 0 0 1px var(--neon);background:var(--neon-soft)}
+.rel-title{font-family:var(--f-display);font-weight:500;font-size:17px;margin-bottom:4px;overflow-wrap:anywhere}
+.rel-sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+.rel-prev .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rel-prev .kpi{padding:12px 13px}
+.rel-prev .kpi-v{font-size:17px}
+.rel-prev .kpi.main .kpi-v{font-size:19px}
+.rel-prev .rep-row{margin:18px 0 0}
+.tag.ev{background:var(--neon-soft);border-color:rgba(51,242,90,.35);color:var(--neon)}
+@media (max-width:900px){
+  .filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .filters .clr{grid-column:1/-1}
+  .rel-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .dash-grid{grid-template-columns:minmax(0,1fr)}
+  .ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ev-card{padding:13px}
+  .ev-total{font-size:17px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpi-v{font-size:18px}
+  .kpi.main{grid-column:1/-1}
+  .tabs button{padding:10px 11px;font-size:14px}
+  .rel-prev .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .view-head h2{font-size:19px}
+}
+
 @media (max-width:1080px){
   .grid{grid-template-columns:minmax(0,1fr) 330px}
 }
@@ -405,7 +494,15 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
     </div>
   </header>
 
+  <nav class="tabs" id="tabs" aria-label="Seções">
+    <button type="button" data-tab="notas" aria-selected="true">Notas</button>
+    <button type="button" data-tab="eventos" aria-selected="false">Eventos</button>
+    <button type="button" data-tab="dash" aria-selected="false">Dashboard</button>
+    <button type="button" data-tab="rel" aria-selected="false">Relatórios</button>
+  </nav>
+
   <div id="banner"></div>
+  <section id="vNotas">
   <nav id="months" class="months" aria-label="Meses"></nav>
 
   <main class="grid">
@@ -418,6 +515,7 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
         <div class="tools">
           <input id="q" class="in" type="search" placeholder="Buscar fornecedor, nº, descrição" aria-label="Buscar notas">
           <select id="fEmp" class="in" aria-label="Filtrar por empreendimento"></select>
+          <select id="fEv" class="in" aria-label="Filtrar por evento"></select>
         </div>
       </div>
       <div id="list" class="list"><div class="loading">Carregando notas…</div></div>
@@ -425,6 +523,10 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
     <aside class="sum-top" id="sumTop" aria-label="Saída do mês"></aside>
     <aside class="sum-more" id="sumMore" aria-label="Detalhes do mês"></aside>
   </main>
+  </section>
+  <section id="vEventos" hidden></section>
+  <section id="vDash" hidden></section>
+  <section id="vRel" hidden></section>
 </div>
 
 <button class="fab" id="fab" type="button" aria-label="Nova nota">
@@ -469,6 +571,7 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
         <div class="field span2" data-f="fornecedor"><label for="f-fornecedor">Fornecedor</label><input id="f-fornecedor" class="in" list="dlForn" placeholder="Quem emitiu a nota"></div>
         <div class="field" data-f="empreendimento"><label for="f-emp">Empreendimento</label><input id="f-emp" class="in" list="dlEmp" placeholder="Ex.: Dona Lys"></div>
         <div class="field" data-f="categoria"><label for="f-cat">Categoria</label><select id="f-cat" class="in"></select></div>
+        <div class="field span2" data-f="evento"><label for="f-ev">Evento</label><select id="f-ev" class="in"></select></div>
         <div class="field" data-f="numero"><label for="f-numero">Nº da nota</label><input id="f-numero" class="in"></div>
         <div class="field" data-f="cnpj"><label for="f-cnpj">CNPJ do fornecedor</label><input id="f-cnpj" class="in" inputmode="numeric"></div>
         <div class="field span2" data-f="descricao"><label for="f-desc">Descrição</label><input id="f-desc" class="in" placeholder="O que foi comprado ou contratado"></div>
@@ -533,6 +636,11 @@ textarea.in{width:100%;min-height:110px;resize:vertical;background:var(--bg);lin
         <div class="money-in" style="max-width:280px"><span>R$</span><input id="s-budget" inputmode="decimal" placeholder="0,00" style="font-size:20px"></div>
       </div>
       <div class="set-sec">
+        <h4><label for="s-evs">Eventos</label></h4>
+        <p>Um por linha. Toda nota precisa estar ligada a um evento.</p>
+        <textarea id="s-evs" class="in" style="min-height:160px"></textarea>
+      </div>
+      <div class="set-sec">
         <h4><label for="s-emps">Empreendimentos</label></h4>
         <p>Um por linha. Aparecem como sugestão ao lançar a nota e ajudam a leitura automática.</p>
         <textarea id="s-emps" class="in"></textarea>
@@ -567,6 +675,7 @@ const CDN = {
   autotable: 'jspdf.plugin.autotable.min.js',
   xlsx: 'xlsx.full.min.js'
 };
+const DEFAULT_EVENTOS = ['FIB','MOTO ROCK','LANÇAMENTO','ABERTURA DE VENDAS','ARRAIA CONQUISTA','ENTREGA','FEIRÃO CAIXA','DIA DAS MÃES','DIA DOS PAIS','OUTUBRO ROSA','CARNAVAL','DIA DA MULHER','DIA DAS CRIANÇAS','NATAL','PÁSCOA','DOAÇÃO','PATROCÍNIO','PREMIAÇÃO','BONIFICAÇÃO'];
 const DEFAULT_CATS = ['Mídia paga e tráfego','Gráfica e impressos','Produção audiovisual','Fotografia','Eventos e stands','Brindes','Agência e freelancers','Influenciadores','Mídia exterior (outdoor)','Ferramentas e assinaturas','Outros'];
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const MES_CURTO = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
@@ -641,12 +750,12 @@ function toast(msg, kind = '') {
 /* ---------- armazenamento: Supabase (equipe) ---------- */
 const CFG = window.VCA_CONFIG || {};
 let sb = null;
-const COLS = { id: 'id', valor: 'valor', dataEmissao: 'data_emissao', mesRef: 'mes_ref', fornecedor: 'fornecedor', empreendimento: 'empreendimento', categoria: 'categoria', numero: 'numero', cnpj: 'cnpj', descricao: 'descricao', status: 'status', arquivo: 'arquivo', origem: 'origem', criadoEm: 'criado_em', atualizadoEm: 'atualizado_em', criadoPorEmail: 'criado_por_email' };
+const COLS = { id: 'id', valor: 'valor', dataEmissao: 'data_emissao', mesRef: 'mes_ref', fornecedor: 'fornecedor', empreendimento: 'empreendimento', categoria: 'categoria', evento: 'evento', numero: 'numero', cnpj: 'cnpj', descricao: 'descricao', status: 'status', arquivo: 'arquivo', origem: 'origem', criadoEm: 'criado_em', atualizadoEm: 'atualizado_em', criadoPorEmail: 'criado_por_email' };
 const toRow = n => { const r = {}; for (const [k, c] of Object.entries(COLS)) if (n[k] !== undefined) r[c] = n[k]; if (!r.data_emissao) r.data_emissao = null; return r; };
 const fromRow = r => {
   const n = {}; for (const [k, c] of Object.entries(COLS)) n[k] = r[c];
   n.valor = parseFloat(r.valor) || 0; n.dataEmissao = r.data_emissao || '';
-  for (const k of ['fornecedor', 'empreendimento', 'categoria', 'numero', 'cnpj', 'descricao', 'criadoPorEmail']) n[k] = n[k] || '';
+  for (const k of ['fornecedor', 'empreendimento', 'categoria', 'evento', 'numero', 'cnpj', 'descricao', 'criadoPorEmail']) n[k] = n[k] || '';
   return n;
 };
 function traduz(err) {
@@ -731,8 +840,11 @@ const SupaStore = {
 
 /* ---------- estado ---------- */
 const S = {
-  notes: [], cfg: { empreendimentos: [], categorias: DEFAULT_CATS.slice(), orcamentoMensal: 0 },
-  month: todayKey(), q: '', emp: '', loaded: false, canWrite: true, flashId: null
+  notes: [], cfg: { empreendimentos: [], categorias: DEFAULT_CATS.slice(), eventos: DEFAULT_EVENTOS.slice(), orcamentoMensal: 0 },
+  month: todayKey(), q: '', emp: '', ev: '', loaded: false, canWrite: true, flashId: null,
+  tab: 'notas', evPer: todayKey().slice(0, 4), evSel: null,
+  dash: { ano: todayKey().slice(0, 4), mes: '', evento: '', empreendimento: '', categoria: '' },
+  rel: { dividir: 'evento', periodo: todayKey().slice(0, 4), item: '' }
 };
 let store = null;
 const CAP = { sample: null, downloads: null, inViewer: false };
@@ -758,7 +870,16 @@ const allCats = () => {
   return c;
 };
 
+const allEvs = () => {
+  const c = (S.cfg.eventos && S.cfg.eventos.length ? S.cfg.eventos : DEFAULT_EVENTOS).slice();
+  for (const n of S.notes) if (n.evento && !c.some(x => norm(x) === norm(n.evento))) c.push(n.evento);
+  return c;
+};
+
 function render() {
+  if (S.tab === 'eventos') return renderEventos();
+  if (S.tab === 'dash') return renderDash();
+  if (S.tab === 'rel') return renderRel();
   renderMonths(); renderList(); renderSummary();
 }
 
@@ -785,9 +906,23 @@ function filtered() {
   const q = norm(S.q);
   return notesOf(S.month).filter(n => {
     if (S.emp && norm(n.empreendimento) !== norm(S.emp)) return false;
+    if (S.ev && norm(n.evento) !== norm(S.ev)) return false;
     if (!q) return true;
-    return [n.fornecedor, n.numero, n.descricao, n.empreendimento, n.categoria, n.cnpj, brlNum(n.valor)].some(v => norm(v).includes(q));
+    return [n.fornecedor, n.numero, n.descricao, n.empreendimento, n.categoria, n.evento, n.cnpj, brlNum(n.valor)].some(v => norm(v).includes(q));
   }).sort((a, b) => (b.dataEmissao || '').localeCompare(a.dataEmissao || '') || (b.criadoEm || '').localeCompare(a.criadoEm || ''));
+}
+
+const CLIP = '<svg class="clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11l-8.5 8.5a5 5 0 0 1-7-7L14 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L15 7"/></svg>';
+function rowHTML(n) {
+  const d = n.dataEmissao && validISO(n.dataEmissao) ? n.dataEmissao.split('-') : null;
+  const sub = [n.descricao, n.numero ? 'NF ' + n.numero : ''].filter(Boolean).join(' · ') || (n.categoria || '');
+  return `<button type="button" class="row${n.id === S.flashId ? ' flash' : ''}" data-id="${esc(n.id)}">
+      <span class="r-date">${d ? `<b>${d[2]}</b>${MES_CURTO[+d[1] - 1]}` : '<b>—</b>s/ data'}</span>
+      <span class="r-main"><b>${esc(n.fornecedor || n.empreendimento || 'Sem fornecedor')}</b><small>${esc(sub)}</small></span>
+      <span class="r-tags">${n.evento ? `<span class="tag ev">${esc(n.evento)}</span>` : ''}${n.empreendimento ? `<span class="tag emp">${esc(n.empreendimento)}</span>` : ''}${n.categoria ? `<span class="tag">${esc(n.categoria)}</span>` : ''}</span>
+      <span class="pill ${n.status === 'a_pagar' ? 'a_pagar' : 'pago'}">${n.status === 'a_pagar' ? 'A pagar' : 'Pago'}</span>
+      <span class="r-val">${n.arquivo ? CLIP : ''}${brl(n.valor)}</span>
+    </button>`;
 }
 
 function renderList() {
@@ -799,6 +934,10 @@ function renderList() {
   if (S.emp && !emps.some(e => norm(e) === norm(S.emp))) S.emp = '';
   $('#fEmp').innerHTML = `<option value="">Todos os empreendimentos</option>` + emps.map(e => `<option${norm(e) === norm(S.emp) ? ' selected' : ''}>${esc(e)}</option>`).join('');
   $('#fEmp').hidden = emps.length < 2;
+  const evs = [...new Set(monthNotes.map(n => (n.evento || '').trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  if (S.ev && !evs.some(e => norm(e) === norm(S.ev))) S.ev = '';
+  $('#fEv').innerHTML = `<option value="">Todos os eventos</option>` + evs.map(e => `<option${norm(e) === norm(S.ev) ? ' selected' : ''}>${esc(e)}</option>`).join('');
+  $('#fEv').hidden = evs.length < 2;
 
   const box = $('#list');
   if (!S.loaded) { box.innerHTML = '<div class="loading">Carregando notas…</div>'; $('#listSub').textContent = ''; return; }
@@ -814,34 +953,24 @@ function renderList() {
     return;
   }
   if (!rows.length) { box.innerHTML = `<div class="empty"><h3>Nada encontrado</h3><p>Nenhuma nota de ${esc(nm)} combina com a busca.</p></div>`; return; }
-  const clip = '<svg class="clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11l-8.5 8.5a5 5 0 0 1-7-7L14 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L15 7"/></svg>';
-  box.innerHTML = rows.map(n => {
-    const d = n.dataEmissao && validISO(n.dataEmissao) ? n.dataEmissao.split('-') : null;
-    const sub = [n.descricao, n.numero ? 'NF ' + n.numero : ''].filter(Boolean).join(' · ') || (n.categoria || '');
-    return `<button type="button" class="row${n.id === S.flashId ? ' flash' : ''}" data-id="${esc(n.id)}">
-      <span class="r-date">${d ? `<b>${d[2]}</b>${MES_CURTO[+d[1] - 1]}` : '<b>—</b>s/ data'}</span>
-      <span class="r-main"><b>${esc(n.fornecedor || n.empreendimento || 'Sem fornecedor')}</b><small>${esc(sub)}</small></span>
-      <span class="r-tags">${n.empreendimento ? `<span class="tag emp">${esc(n.empreendimento)}</span>` : ''}${n.categoria ? `<span class="tag">${esc(n.categoria)}</span>` : ''}</span>
-      <span class="pill ${n.status === 'a_pagar' ? 'a_pagar' : 'pago'}">${n.status === 'a_pagar' ? 'A pagar' : 'Pago'}</span>
-      <span class="r-val">${n.arquivo ? clip : ''}${brl(n.valor)}</span>
-    </button>`;
-  }).join('') + `<div class="list-foot"><span>${rows.length === monthNotes.length ? 'Total do mês' : `Total filtrado (${rows.length})`}</span><strong>${brl(sum(rows))}</strong></div>`;
+  box.innerHTML = rows.map(rowHTML).join('') + `<div class="list-foot"><span>${rows.length === monthNotes.length ? 'Total do mês' : `Total filtrado (${rows.length})`}</span><strong>${brl(sum(rows))}</strong></div>`;
   S.flashId = null;
 }
 
-function barsHTML(groups, total, { limit = 5, cls = '' } = {}) {
-  if (!groups.length) return '<p class="empty-mini">Sem lançamentos neste mês.</p>';
+function barsHTML(groups, total, { limit = 5, cls = '', of = 'do mês', dim = '' } = {}) {
+  if (!groups.length) return '<p class="empty-mini">Sem lançamentos.</p>';
   let g = groups.slice(0, limit);
   if (groups.length > limit) {
     const rest = groups.slice(limit);
     g.push({ k: `Outros (${rest.length})`, total: rest.reduce((a, x) => a + x.total, 0), n: rest.reduce((a, x) => a + x.n, 0) });
   }
   const max = Math.max(...g.map(x => x.total), 1);
-  return `<div class="bars ${cls}">` + g.map(x => `<div>
-    <div class="bar-top"><span class="bar-k" title="${esc(x.k)}">${esc(x.k)}</span><span class="bar-v">${brl(x.total)}</span></div>
+  return `<div class="bars ${cls}">` + g.map(x => {
+    const inner = `<div class="bar-top"><span class="bar-k" title="${esc(x.k)}">${esc(x.k)}</span><span class="bar-v">${brl(x.total)}</span></div>
     <div class="bar-track"><i style="width:${Math.max(2, x.total / max * 100).toFixed(1)}%"></i></div>
-    <div class="bar-sub">${x.n} ${x.n === 1 ? 'nota' : 'notas'} · ${total ? Math.round(x.total / total * 100) : 0}% do mês</div>
-  </div>`).join('') + '</div>';
+    <div class="bar-sub">${x.n} ${x.n === 1 ? 'nota' : 'notas'} · ${total ? Math.round(x.total / total * 100) : 0}% ${of}</div>`;
+    return dim && x.raw ? `<button type="button" class="bar-btn" data-dfil="${dim}" data-val="${esc(x.raw)}" title="Filtrar por ${esc(x.k)}">${inner}</button>` : `<div>${inner}</div>`;
+  }).join('') + '</div>';
 }
 
 function yearChart(year) {
@@ -902,7 +1031,7 @@ function renderSummary() {
     <div class="report-btns">
       <button class="btn-ghost" type="button" data-rep="pdf" ${list.length ? '' : 'disabled'}>Relatório PDF</button>
       <button class="btn-ghost" type="button" data-rep="xlsx" ${list.length ? '' : 'disabled'}>Planilha Excel</button>
-      <button class="report-year" type="button" data-rep="year">Relatório do ano ${k.slice(0, 4)} (PDF e Excel)</button>
+      <button class="report-year" type="button" data-tabgo="rel">Mais relatórios: por evento, empreendimento, categoria e ano</button>
     </div>
   </div>`;
   // animação do total quando ele muda no mesmo mês
@@ -912,6 +1041,7 @@ function renderSummary() {
 
   const forn = group(list, n => n.fornecedor);
   $('#sumMore').innerHTML = `
+    <div class="panel"><h3>Por evento</h3>${barsHTML(groupDim(list, 'evento'), total)}</div>
     <div class="panel"><h3>Por empreendimento</h3>${barsHTML(group(list, n => n.empreendimento), total, { cls: 'royal' })}</div>
     <div class="panel"><h3>Por categoria</h3>${barsHTML(group(list, n => n.categoria), total)}</div>
     <div class="panel"><h3>Maiores fornecedores</h3>${barsHTML(forn, total, { limit: 4, cls: 'white' })}</div>
@@ -963,7 +1093,10 @@ function monthOptions(selected) {
   if (selected) set.add(selected);
   return [...set].sort().reverse().map(k => `<option value="${k}"${k === selected ? ' selected' : ''}>${monthLabel(k)}</option>`).join('');
 }
-function fillFormOptions(cat) {
+function fillFormOptions(cat, ev) {
+  const evs = allEvs();
+  if (ev && !evs.some(x => x === ev)) evs.push(ev);
+  $('#f-ev').innerHTML = `<option value="">Escolha o evento…</option>` + evs.map(x => `<option${x === ev ? ' selected' : ''}>${esc(x)}</option>`).join('');
   const cats = allCats();
   if (cat && !cats.includes(cat)) cats.push(cat);
   $('#f-cat').innerHTML = `<option value="">Escolha…</option>` + cats.map(c => `<option${c === cat ? ' selected' : ''}>${esc(c)}</option>`).join('');
@@ -986,7 +1119,7 @@ function openForm(note) {
   resetForm();
   F.editing = note || null;
   $('#mFormTitle').textContent = note ? 'Editar nota' : 'Nova nota';
-  fillFormOptions(note && note.categoria);
+  fillFormOptions(note && note.categoria, note && note.evento);
   $('#f-mes').innerHTML = monthOptions(note ? note.mesRef : S.month);
   if (note) {
     $('#f-valor').value = note.valor ? brlNum(note.valor) : '';
@@ -1167,9 +1300,10 @@ Hoje é ${dateBR(todayISO())}.
 
 Empreendimentos da VCA: ${emps.length ? emps.join('; ') : '(nenhum cadastrado)'}
 Categorias de despesa: ${cats.join('; ')}
+Eventos de marketing: ${allEvs().join('; ')}
 
 Responda APENAS com um objeto JSON, sem texto antes ou depois, neste formato:
-{"e_documento_fiscal": true, "fornecedor": "", "cnpj": "", "numero": "", "data_emissao": "AAAA-MM-DD", "valor_total": 0, "descricao": "", "empreendimento": "", "categoria": "", "observacao": ""}
+{"e_documento_fiscal": true, "fornecedor": "", "cnpj": "", "numero": "", "data_emissao": "AAAA-MM-DD", "valor_total": 0, "descricao": "", "empreendimento": "", "categoria": "", "evento": "", "observacao": ""}
 
 Regras:
 - fornecedor: quem emitiu o documento (prestador/emitente). Nome fantasia se houver, senão a razão social. Nunca a VCA.
@@ -1180,6 +1314,7 @@ Regras:
 - descricao: até 90 caracteres dizendo o que foi comprado ou contratado.
 - empreendimento: se o documento citar um dos empreendimentos da lista (ou um nome claramente igual), copie exatamente como está na lista. Se citar outro empreendimento, escreva o nome como aparece. Se não citar, "".
 - categoria: a opção mais adequada da lista de categorias, copiada exatamente.
+- evento: só preencha se o documento indicar claramente um dos eventos da lista (por exemplo, o nome do evento na descrição do serviço). Copie exatamente como está na lista. Se não der para saber, "".
 - observacao: avisos curtos (ex.: "imagem cortada", "valor líquido R$ X"). "" se nada.
 - Campo ilegível ou ausente: "".
 - Se não for um documento fiscal ou comprovante de pagamento, e_documento_fiscal = false.
@@ -1287,6 +1422,11 @@ function applyExtraction(r) {
     const match = cats.find(c => norm(c) === want) || cats.find(c => norm(c).includes(want) || want.includes(norm(c)));
     if (match) { $('#f-cat').value = match; $('#f-cat').closest('.field').classList.add('ai'); n++; }
   }
+  if (r.evento && !F.touched.has('evento')) {
+    const evs = allEvs(); const want = norm(r.evento);
+    const match = evs.find(c => norm(c) === want) || evs.find(c => norm(c).includes(want) || want.includes(norm(c)));
+    if (match) { $('#f-ev').value = match; $('#f-ev').closest('.field').classList.add('ai'); n++; }
+  }
   checkDup();
   return n;
 }
@@ -1302,6 +1442,8 @@ async function saveForm() {
   if (isNaN(valor) || valor <= 0) { formError('Informe o valor da nota.'); $('#f-valor').focus(); return; }
   if (!fornecedor && !empreendimento) { formError('Informe o fornecedor ou o empreendimento.'); $('#f-fornecedor').focus(); return; }
   if (!/^\d{4}-\d{2}$/.test(mesRef)) { formError('Escolha o mês em que a nota entra.'); return; }
+  const evento = $('#f-ev').value;
+  if (!evento) { formError('Escolha o evento desta nota.'); $('#f-ev').focus(); return; }
   if (F.ctl) { try { F.ctl.abort(); } catch {} }
   const btn = $('#btnSave'); btn.disabled = true; btn.textContent = 'Salvando…';
   const old = F.editing;
@@ -1327,6 +1469,7 @@ async function saveForm() {
       dataEmissao: validISO($('#f-data').value) ? $('#f-data').value : '',
       mesRef, fornecedor, empreendimento,
       categoria: $('#f-cat').value || '',
+      evento,
       numero: $('#f-numero').value.trim(),
       cnpj: $('#f-cnpj').value.trim(),
       descricao: $('#f-desc').value.trim(),
@@ -1367,6 +1510,7 @@ function openView(id) {
     ['CNPJ', n.cnpj ? `<span class="mono">${esc(n.cnpj)}</span>` : '—', true],
     ['Nº da nota', n.numero ? `<span class="mono">${esc(n.numero)}</span>` : '—', true],
     ['Empreendimento', n.empreendimento || '—'],
+    ['Evento', n.evento || '—'],
     ['Categoria', n.categoria || '—'],
     ['Descrição', n.descricao || '—'],
     ['Situação', `<span class="pill ${n.status === 'a_pagar' ? 'a_pagar' : 'pago'}">${n.status === 'a_pagar' ? 'A pagar' : 'Pago'}</span>`, true],
@@ -1428,172 +1572,442 @@ async function saveFile(filename, blob) {
   setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
 }
 
-/* ---------- relatórios ---------- */
-function scopeData(scope) {
-  const notes = (scope.type === 'month' ? notesOf(scope.key) : S.notes.filter(n => (n.mesRef || '').startsWith(scope.year + '-')))
-    .slice().sort((a, b) => (a.mesRef || '').localeCompare(b.mesRef || '') || (a.dataEmissao || '').localeCompare(b.dataEmissao || ''));
-  const total = sum(notes);
-  const label = scope.type === 'month' ? `${cap(monthName(scope.key))} de ${scope.key.slice(0, 4)}` : `Ano de ${scope.year}`;
-  const slug = scope.type === 'month' ? scope.key : String(scope.year);
-  return { notes, total, label, slug };
+/* ---------- recortes (filtros) ---------- */
+const pdfTxt = s => String(s ?? '').replace(/[  ]/g, ' ').replace(/[^\x00-\xff–—•…€]/g, '');
+const DIMS = {
+  mes: { label: 'Mês', plural: 'meses', key: n => n.mesRef || '', name: k => monthLabel(k), chrono: true },
+  ano: { label: 'Ano', plural: 'anos', key: n => (n.mesRef || '').slice(0, 4), name: k => k, chrono: true },
+  evento: { label: 'Evento', plural: 'eventos', key: n => n.evento || '', empty: 'Sem evento' },
+  empreendimento: { label: 'Empreendimento', plural: 'empreendimentos', key: n => n.empreendimento || '', empty: 'Sem empreendimento' },
+  categoria: { label: 'Categoria', plural: 'categorias', key: n => n.categoria || '', empty: 'Sem categoria' },
+  fornecedor: { label: 'Fornecedor', plural: 'fornecedores', key: n => n.fornecedor || '', empty: 'Sem fornecedor' }
+};
+const FDIMS = ['evento', 'empreendimento', 'categoria'];
+function groupDim(notes, dim) {
+  const d = DIMS[dim]; const m = new Map();
+  for (const n of notes) {
+    const raw = String(d.key(n) || '').trim(); const id = raw ? norm(raw) : '';
+    let g = m.get(id);
+    if (!g) { g = { id, raw, k: raw ? (d.name ? d.name(raw) : raw) : (d.empty || 'Sem informação'), total: 0, n: 0, notes: [] }; m.set(id, g); }
+    g.total += +n.valor || 0; g.n++; g.notes.push(n);
+  }
+  const gs = [...m.values()];
+  if (d.chrono) gs.sort((a, b) => a.raw.localeCompare(b.raw)); else gs.sort((a, b) => b.total - a.total);
+  return gs;
 }
-const pdfTxt = s => String(s ?? '').replace(/ | /g, ' ').replace(/[^\x00-\xff–—•…€]/g, '');
+const byDate = (a, b) => (a.mesRef || '').localeCompare(b.mesRef || '') || (a.dataEmissao || '').localeCompare(b.dataEmissao || '');
+function applyFilter(f = {}) {
+  return S.notes.filter(n => (!f.periodo || (n.mesRef || '').startsWith(f.periodo))
+    && FDIMS.every(d => !f[d] || norm(n[d]) === norm(f[d]))).sort(byDate);
+}
+const periodLabel = p => !p ? 'Todo o período' : p.length === 4 ? `Ano de ${p}` : `${cap(monthName(p))} de ${p.slice(0, 4)}`;
+function filterLabel(f = {}) {
+  const parts = FDIMS.filter(d => f[d]).map(d => `${DIMS[d].label}: ${f[d]}`);
+  parts.push(periodLabel(f.periodo));
+  return parts.join(' · ');
+}
+const slugify = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40);
+const filterSlug = (f = {}, dividir = '') => [dividir ? 'por-' + dividir : '', ...FDIMS.filter(d => f[d]).map(d => slugify(f[d])), f.periodo || 'todo-periodo'].filter(Boolean).join('-');
+const yearsWithData = () => [...new Set(S.notes.map(n => (n.mesRef || '').slice(0, 4)).filter(Boolean).concat([todayKey().slice(0, 4)]))].sort().reverse();
+const monthsWithNotes = () => [...new Set(S.notes.map(n => n.mesRef).filter(Boolean))].sort().reverse();
+const opt = (v, l, cur) => `<option value="${esc(v)}"${String(v) === String(cur || '') ? ' selected' : ''}>${esc(l)}</option>`;
+const shortBRL = v => v >= 1e6 ? (v / 1e6).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' mi' : v >= 1000 ? (v / 1000).toLocaleString('pt-BR', { maximumFractionDigits: v >= 1e5 ? 0 : 1 }) + ' mil' : Math.round(v).toLocaleString('pt-BR');
+const pctTxt = (v, t) => (t ? v / t * 100 : 0).toFixed(1).replace('.', ',') + '%';
+const runRep = (fn, arg) => fn(arg).catch(err => toast(esc((err && err.message) || 'Não consegui gerar o arquivo.'), 'err'));
 
-async function reportPDF(scope) {
-  const d = scopeData(scope);
-  if (!d.notes.length) { toast('Não há notas nesse período.', 'err'); return; }
+/* ---------- relatórios: PDF ---------- */
+function noteCols(f, dividir) {
+  const oneMonth = !!(f.periodo && f.periodo.length === 7);
+  const cols = [{ h: 'Emissão', w: 54, v: n => dateBR(n.dataEmissao) || '—' }];
+  if (!oneMonth && dividir !== 'mes') cols.push({ h: 'Mês', w: 40, v: n => n.mesRef ? MES_CURTO[+n.mesRef.slice(5) - 1] + '/' + n.mesRef.slice(2, 4) : '—' });
+  cols.push({ h: 'Nº NF', w: 46, v: n => n.numero || '—' });
+  cols.push({ h: 'Fornecedor', v: n => n.fornecedor || '—' });
+  for (const d of ['evento', 'empreendimento', 'categoria']) if (d !== dividir && !f[d]) cols.push({ h: DIMS[d].label, v: n => n[d] || '—' });
+  cols.push({ h: 'Situação', w: 52, v: n => n.status === 'a_pagar' ? 'A pagar' : 'Pago' });
+  cols.push({ h: 'Valor', w: 70, v: n => brl(n.valor), money: true });
+  return cols;
+}
+
+async function gerarPDF({ filtro = {}, dividir = '' } = {}) {
+  const notes = applyFilter(filtro);
+  if (!notes.length) { toast('Não há notas nesse recorte.', 'err'); return; }
   toast('Gerando o PDF…');
   await loadScript(CDN.jspdf); await loadScript(CDN.autotable);
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'pt', format: 'a4' });
   const W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight(), M = 36;
-  const GREEN = [31, 160, 64], INK = [12, 16, 14], BLACK = [6, 8, 7];
+  const INK = [12, 16, 14], BLACK = [6, 8, 7], GRAY = [100, 112, 106];
+  const total = sum(notes);
+  const titulo = dividir ? `Relatório por ${DIMS[dividir].label.toLowerCase()}` : 'Relatório de despesas do Marketing';
+  const sub = filterLabel(filtro);
+
   doc.setFillColor(...BLACK); doc.rect(0, 0, W, 100, 'F');
   doc.setFillColor(51, 242, 90); doc.rect(0, 100, W, 3, 'F');
   try { doc.addImage(LOGO, 'JPEG', M, 20, 60, 60); } catch {}
   doc.setTextColor(255, 255, 255); doc.setFont('helvetica', 'bold'); doc.setFontSize(19);
-  doc.text(pdfTxt('Relatório de despesas do Marketing'), M + 76, 45);
-  doc.setTextColor(51, 242, 90); doc.setFontSize(12.5); doc.text(pdfTxt(d.label.toUpperCase()), M + 76, 64);
+  doc.text(pdfTxt(titulo), M + 76, 45);
+  doc.setTextColor(51, 242, 90); doc.setFontSize(11.5);
+  doc.text(doc.splitTextToSize(pdfTxt(sub.toUpperCase()), W - M * 2 - 76)[0], M + 76, 64);
   doc.setTextColor(165, 178, 172); doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5);
   doc.text(pdfTxt('VCA Construtora e Incorporadora · gerado em ' + new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })), M + 76, 80);
 
-  // indicadores
   let y = 124;
-  const pagos = sum(d.notes.filter(n => n.status !== 'a_pagar')), aPagar = sum(d.notes.filter(n => n.status === 'a_pagar'));
+  const aPagar = sum(notes.filter(n => n.status === 'a_pagar'));
+  const months = new Set(notes.map(n => n.mesRef)).size;
   let k4;
-  if (scope.type === 'month') {
-    const pk = shiftMonth(scope.key, -1), pv = sum(notesOf(pk));
-    k4 = [`Vs ${monthName(pk)}`, pv > 0 ? `${d.total >= pv ? '+' : '-'}${Math.abs((d.total - pv) / pv * 100).toFixed(0)}%` : '—'];
+  if (filtro.periodo && filtro.periodo.length === 7) {
+    const pk = shiftMonth(filtro.periodo, -1), pv = sum(applyFilter({ ...filtro, periodo: pk }));
+    k4 = [`Vs ${monthName(pk)}`, pv > 0 ? `${total >= pv ? '+' : '-'}${Math.abs((total - pv) / pv * 100).toFixed(0)}%` : '—'];
+  } else if (dividir) {
+    k4 = [cap(DIMS[dividir].plural), String(groupDim(notes, dividir).length)];
   } else {
-    const months = new Set(d.notes.map(n => n.mesRef)).size;
-    k4 = ['Média por mês', brl(months ? d.total / months : 0)];
+    k4 = ['Média por mês', brl(months ? total / months : 0)];
   }
-  const kpis = [['Total do período', brl(d.total)], ['Notas fiscais', String(d.notes.length)], ['Ticket médio', brl(d.total / d.notes.length)], k4];
+  const kpis = [['Total do período', brl(total)], ['Notas fiscais', String(notes.length)], ['Ticket médio', brl(total / notes.length)], k4];
   const bw = (W - 2 * M - 3 * 10) / 4;
   kpis.forEach(([lab, val], i) => {
     const x = M + i * (bw + 10);
     doc.setFillColor(i === 0 ? 236 : 245, i === 0 ? 252 : 247, i === 0 ? 240 : 246); doc.roundedRect(x, y, bw, 54, 6, 6, 'F');
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(100, 112, 106); doc.text(pdfTxt(lab.toUpperCase()), x + 10, y + 18);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(...GRAY); doc.text(pdfTxt(lab.toUpperCase()), x + 10, y + 18);
     doc.setFont('helvetica', 'bold'); doc.setFontSize(i === 0 ? 14 : 13); doc.setTextColor(...INK); doc.text(pdfTxt(val), x + 10, y + 40);
   });
   y += 70;
-  if (aPagar > 0) {
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(100, 112, 106);
-    doc.text(pdfTxt(`Pago: ${brl(pagos)}   ·   A pagar: ${brl(aPagar)}`), M, y); y += 14;
-  }
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(...GRAY);
+  if (aPagar > 0) { doc.text(pdfTxt(`Pago: ${brl(total - aPagar)}   ·   A pagar: ${brl(aPagar)}`), M, y); y += 14; }
   const budget = +S.cfg.orcamentoMensal || 0;
-  if (budget > 0 && scope.type === 'month') {
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(100, 112, 106);
-    doc.text(pdfTxt(`Orçamento do mês: ${brl(budget)} · usado ${(d.total / budget * 100).toFixed(0)}%`), M, y); y += 14;
+  if (budget > 0 && filtro.periodo && filtro.periodo.length === 7 && !FDIMS.some(d => filtro[d])) {
+    doc.text(pdfTxt(`Orçamento do mês: ${brl(budget)} · usado ${(total / budget * 100).toFixed(0)}%`), M, y); y += 14;
   }
 
-  const section = (title) => {
-    if (y > H - 120) { doc.addPage(); y = M + 10; }
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(...INK); doc.text(pdfTxt(title), M, y + 10); y += 18;
-  };
   const base = {
-    margin: { left: M, right: M }, theme: 'plain',
+    margin: { left: M, right: M, top: M, bottom: 40 }, theme: 'plain',
     styles: { font: 'helvetica', fontSize: 8.5, cellPadding: { top: 5, bottom: 5, left: 6, right: 6 }, textColor: INK, lineColor: [228, 232, 230], lineWidth: { bottom: .5 } },
     headStyles: { fillColor: BLACK, textColor: [51, 242, 90], fontStyle: 'bold', fontSize: 8 },
     footStyles: { fillColor: [236, 252, 240], textColor: INK, fontStyle: 'bold' },
     alternateRowStyles: { fillColor: [248, 250, 249] }
   };
-  const groupTable = (title, groups) => {
+  const section = title => {
+    if (y > H - 120) { doc.addPage(); y = M; }
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(...INK); doc.text(pdfTxt(title), M, y + 10); y += 18;
+  };
+  const groupTable = (dim, title) => {
+    const gs = groupDim(notes, dim);
     section(title);
     doc.autoTable({ ...base, startY: y,
-      head: [[cap(title.replace(/^Por /, '')), 'Notas', 'Valor', '% do total'].map(pdfTxt)],
-      body: groups.map(g => [g.k, g.n, brl(g.total), (d.total ? g.total / d.total * 100 : 0).toFixed(1).replace('.', ',') + '%'].map(pdfTxt)),
-      columnStyles: { 1: { halign: 'center', cellWidth: 50 }, 2: { halign: 'right', cellWidth: 100 }, 3: { halign: 'right', cellWidth: 70 } }
+      head: [[DIMS[dim].label, 'Notas', 'Valor', '% do total'].map(pdfTxt)],
+      body: gs.map(g => [g.k, g.n, brl(g.total), pctTxt(g.total, total)].map(pdfTxt)),
+      foot: [['Total', notes.length, brl(total), '100%'].map(pdfTxt)],
+      columnStyles: { 1: { halign: 'center', cellWidth: 50 }, 2: { halign: 'right', cellWidth: 100 }, 3: { halign: 'right', cellWidth: 70 } },
+      didParseCell: c => { if (c.section === 'foot' && c.column.index >= 1) c.cell.styles.halign = c.column.index === 1 ? 'center' : 'right'; }
     });
     y = doc.lastAutoTable.finalY + 18;
   };
-  if (scope.type === 'year') {
-    section('Por mês');
-    const rows = [];
-    for (let i = 1; i <= 12; i++) { const k = `${scope.year}-${pad(i)}`; const l = notesOf(k); if (l.length) rows.push([cap(MESES[i - 1]), l.length, brl(sum(l)), (sum(l) / d.total * 100).toFixed(1).replace('.', ',') + '%']); }
-    doc.autoTable({ ...base, startY: y, head: [['Mês', 'Notas', 'Valor', '% do ano'].map(pdfTxt)], body: rows.map(r => r.map(pdfTxt)),
-      foot: [['Total', d.notes.length, brl(d.total), '100%'].map(pdfTxt)],
-      columnStyles: { 1: { halign: 'center', cellWidth: 50 }, 2: { halign: 'right', cellWidth: 100 }, 3: { halign: 'right', cellWidth: 70 } } });
-    y = doc.lastAutoTable.finalY + 18;
-  }
-  groupTable('Por empreendimento', group(d.notes, n => n.empreendimento));
-  groupTable('Por categoria', group(d.notes, n => n.categoria));
-  groupTable('Por fornecedor', group(d.notes, n => n.fornecedor));
+  const cols = noteCols(filtro, dividir);
+  const vi = cols.length - 1;
+  const colStyles = {};
+  cols.forEach((c, i) => { colStyles[i] = {}; if (c.w) colStyles[i].cellWidth = c.w; if (c.money) Object.assign(colStyles[i], { halign: 'right', fontStyle: 'bold' }); });
+  const notesTable = (list, footLabel) => {
+    doc.autoTable({ ...base, startY: y,
+      head: [cols.map(c => pdfTxt(c.h))],
+      body: list.map(n => cols.map(c => pdfTxt(c.v(n)))),
+      foot: [[...Array(vi - 1).fill(''), footLabel, brl(sum(list))].map(pdfTxt)], showFoot: 'lastPage',
+      styles: { ...base.styles, fontSize: 7.6, cellPadding: { top: 4, bottom: 4, left: 4, right: 4 } },
+      columnStyles: colStyles,
+      didParseCell: c => { if (c.section !== 'body' && c.column.index === vi) c.cell.styles.halign = 'right'; }
+    });
+    y = doc.lastAutoTable.finalY + 20;
+  };
 
-  section('Notas fiscais');
-  const yearCol = scope.type === 'year';
-  const head = ['Emissão', ...(yearCol ? ['Mês'] : []), 'Nº NF', 'Fornecedor', 'Empreendimento', 'Categoria', 'Situação', 'Valor'];
-  const body = d.notes.map(n => [dateBR(n.dataEmissao) || '—', ...(yearCol ? [MES_CURTO[+n.mesRef.slice(5) - 1]] : []), n.numero || '—', n.fornecedor || '—', n.empreendimento || '—', n.categoria || '—', n.status === 'a_pagar' ? 'A pagar' : 'Pago', brl(n.valor)].map(pdfTxt));
-  const foot = [[...Array(head.length - 2).fill(''), 'Total', brl(d.total)].map(pdfTxt)];
-  const vi = head.length - 1;
-  doc.autoTable({ ...base, startY: y, head: [head.map(pdfTxt)], body, foot, showFoot: 'lastPage',
-    styles: { ...base.styles, fontSize: 7.8 },
-    columnStyles: { 0: { cellWidth: 52 }, [vi]: { halign: 'right', cellWidth: 72, fontStyle: 'bold' }, [vi - 1]: { cellWidth: 46 } },
-    didParseCell: data => { if (data.section === 'foot' && data.column.index === vi) data.cell.styles.halign = 'right'; }
-  });
+  if (dividir) {
+    const gs = groupDim(notes, dividir);
+    groupTable(dividir, `Resumo por ${DIMS[dividir].label.toLowerCase()}`);
+    for (const g of gs) {
+      if (y > H - 130) { doc.addPage(); y = M; }
+      doc.setFillColor(236, 252, 240); doc.roundedRect(M, y, W - 2 * M, 26, 4, 4, 'F');
+      doc.setFillColor(31, 160, 64); doc.rect(M, y, 3, 26, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.setTextColor(...INK);
+      doc.text(doc.splitTextToSize(pdfTxt(g.k.toUpperCase()), W - 2 * M - 220)[0], M + 12, y + 17);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.8); doc.setTextColor(...GRAY);
+      doc.text(pdfTxt(`${g.n} ${g.n === 1 ? 'nota' : 'notas'} · ${brl(g.total)} · ${pctTxt(g.total, total)}`), W - M - 10, y + 17, { align: 'right' });
+      y += 32;
+      notesTable(g.notes, 'Subtotal');
+    }
+  } else {
+    if (months > 1) groupTable('mes', 'Por mês');
+    for (const d of FDIMS) if (!filtro[d]) groupTable(d, 'Por ' + DIMS[d].label.toLowerCase());
+    groupTable('fornecedor', 'Por fornecedor');
+    section('Notas fiscais');
+    notesTable(notes, 'Total');
+  }
 
   const pages = doc.getNumberOfPages();
   for (let i = 1; i <= pages; i++) {
     doc.setPage(i); doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(140, 150, 146);
-    doc.text(pdfTxt(`Marketing VCA · ${d.label}`), M, H - 20);
+    doc.text(doc.splitTextToSize(pdfTxt(`Marketing VCA · ${titulo} · ${sub}`), W - 2 * M - 80)[0], M, H - 20);
     doc.text(pdfTxt(`Página ${i} de ${pages}`), W - M, H - 20, { align: 'right' });
   }
-  await saveFile(`Relatorio-Marketing-VCA-${d.slug}.pdf`, doc.output('blob'));
+  await saveFile(`Relatorio-Marketing-VCA-${filterSlug(filtro, dividir)}.pdf`, doc.output('blob'));
 }
 
-async function reportXLSX(scope) {
-  const d = scopeData(scope);
-  if (!d.notes.length) { toast('Não há notas nesse período.', 'err'); return; }
+/* ---------- relatórios: Excel ---------- */
+async function gerarXLSX({ filtro = {}, dividir = '' } = {}) {
+  const notes = applyFilter(filtro);
+  if (!notes.length) { toast('Não há notas nesse recorte.', 'err'); return; }
   toast('Gerando a planilha…');
   await loadScript(CDN.xlsx);
   const X = window.XLSX; const wb = X.utils.book_new();
-  const head = ['Data de emissão', 'Mês de referência', 'Nº NF', 'Fornecedor', 'CNPJ', 'Empreendimento', 'Categoria', 'Descrição', 'Situação', 'Valor (R$)'];
-  const rows = [head, ...d.notes.map(n => [dateBR(n.dataEmissao), monthLabel(n.mesRef), n.numero || '', n.fornecedor || '', n.cnpj || '', n.empreendimento || '', n.categoria || '', n.descricao || '', n.status === 'a_pagar' ? 'A pagar' : 'Pago', +n.valor || 0])];
-  rows.push([]); rows.push(['', '', '', '', '', '', '', '', 'Total', d.total]);
-  const ws = X.utils.aoa_to_sheet(rows);
-  const last = d.notes.length + 1;
-  const tc = ws[X.utils.encode_cell({ r: last + 1, c: 9 })]; if (tc) tc.f = `SUM(J2:J${last})`;
-  for (let r = 1; r <= last + 1; r++) { const c = ws[X.utils.encode_cell({ r, c: 9 })]; if (c && c.t === 'n') c.z = '"R$" #,##0.00'; }
-  ws['!cols'] = [12, 18, 12, 32, 20, 20, 24, 40, 10, 14].map(w => ({ wch: w }));
-  ws['!autofilter'] = { ref: `A1:J${last}` };
-  const res = [['Relatório de despesas do Marketing · VCA'], [d.label], [], ['Total', d.total], ['Notas', d.notes.length], ['Ticket médio', d.total / d.notes.length], []];
-  const block = (title, gs) => { res.push([title, 'Notas', 'Valor (R$)', '% do total']); gs.forEach(g => res.push([g.k, g.n, g.total, d.total ? g.total / d.total : 0])); res.push([]); };
-  if (scope.type === 'year') {
-    const gs = []; for (let i = 1; i <= 12; i++) { const l = notesOf(`${scope.year}-${pad(i)}`); if (l.length) gs.push({ k: cap(MESES[i - 1]), n: l.length, total: sum(l) }); }
-    block('Mês', gs);
+  const total = sum(notes);
+  const res = [['Relatório de despesas do Marketing · VCA'], [dividir ? `Dividido por ${DIMS[dividir].label.toLowerCase()}` : 'Recorte'], [filterLabel(filtro)], [], ['Total', total], ['Notas', notes.length], ['Ticket médio', total / notes.length], []];
+  const moneyRows = new Set([4, 6]);
+  const dims = [];
+  if (dividir) { dims.push(dividir); for (const d of FDIMS) if (d !== dividir && !filtro[d]) dims.push(d); }
+  else { if (new Set(notes.map(n => n.mesRef)).size > 1) dims.push('mes'); for (const d of FDIMS) if (!filtro[d]) dims.push(d); dims.push('fornecedor'); }
+  for (const d of dims) {
+    res.push([DIMS[d].label, 'Notas', 'Valor (R$)', '% do total']);
+    groupDim(notes, d).forEach(g => res.push([g.k, g.n, g.total, total ? g.total / total : 0]));
+    res.push([]);
   }
-  block('Empreendimento', group(d.notes, n => n.empreendimento));
-  block('Categoria', group(d.notes, n => n.categoria));
-  block('Fornecedor', group(d.notes, n => n.fornecedor));
   const ws2 = X.utils.aoa_to_sheet(res);
   Object.keys(ws2).forEach(a => {
     if (a[0] === '!') return; const cell = ws2[a]; const { c, r } = X.utils.decode_cell(a);
     if (cell.t !== 'n') return;
     if (c === 3) cell.z = '0.0%';
-    else if (c === 2 || (c === 1 && (r === 3 || r === 5))) cell.z = '"R$" #,##0.00';
+    else if (c === 2 || (c === 1 && moneyRows.has(r))) cell.z = '"R$" #,##0.00';
   });
-  ws2['!cols'] = [{ wch: 34 }, { wch: 14 }, { wch: 16 }, { wch: 12 }];
+  ws2['!cols'] = [{ wch: 36 }, { wch: 14 }, { wch: 16 }, { wch: 12 }];
+
+  const lead = dividir ? [DIMS[dividir].label] : [];
+  const head = [...lead, 'Data de emissão', 'Mês de referência', 'Nº NF', 'Fornecedor', 'CNPJ', 'Empreendimento', 'Evento', 'Categoria', 'Descrição', 'Situação', 'Valor (R$)'];
+  const ordered = dividir ? groupDim(notes, dividir).flatMap(g => g.notes.map(n => ({ n, g: g.k }))) : notes.map(n => ({ n, g: '' }));
+  const rows = [head, ...ordered.map(({ n, g }) => [...(dividir ? [g] : []), dateBR(n.dataEmissao), monthLabel(n.mesRef), n.numero || '', n.fornecedor || '', n.cnpj || '', n.empreendimento || '', n.evento || '', n.categoria || '', n.descricao || '', n.status === 'a_pagar' ? 'A pagar' : 'Pago', +n.valor || 0])];
+  rows.push([]); rows.push([...Array(head.length - 2).fill(''), 'Total', total]);
+  const ws = X.utils.aoa_to_sheet(rows);
+  const vc = head.length - 1, last = ordered.length + 1, col = X.utils.encode_col(vc);
+  const tc = ws[X.utils.encode_cell({ r: last + 1, c: vc })]; if (tc) tc.f = `SUM(${col}2:${col}${last})`;
+  for (let r = 1; r <= last + 1; r++) { const c = ws[X.utils.encode_cell({ r, c: vc })]; if (c && c.t === 'n') c.z = '"R$" #,##0.00'; }
+  ws['!cols'] = [...(dividir ? [24] : []), 12, 18, 12, 32, 20, 20, 22, 24, 40, 10, 14].map(w => ({ wch: w }));
+  ws['!autofilter'] = { ref: `A1:${col}${last}` };
   X.utils.book_append_sheet(wb, ws2, 'Resumo');
   X.utils.book_append_sheet(wb, ws, 'Notas');
   const out = X.write(wb, { bookType: 'xlsx', type: 'array' });
-  await saveFile(`Notas-Marketing-VCA-${d.slug}.xlsx`, new Blob([out], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }));
+  await saveFile(`Notas-Marketing-VCA-${filterSlug(filtro, dividir)}.xlsx`, new Blob([out], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }));
 }
 
-let yearMenu = null;
-function showYearMenu(btn) {
-  if (yearMenu) { yearMenu.remove(); yearMenu = null; return; }
-  const y = S.month.slice(0, 4);
-  yearMenu = document.createElement('div');
-  yearMenu.style.cssText = 'grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px';
-  yearMenu.innerHTML = `<button class="btn-royal" type="button" data-rep="ypdf">PDF de ${y}</button><button class="btn-royal" type="button" data-rep="yxlsx">Excel de ${y}</button>`;
-  btn.after(yearMenu);
+/* ---------- abas ---------- */
+const TABS = { notas: 'vNotas', eventos: 'vEventos', dash: 'vDash', rel: 'vRel' };
+const TAB_HASH = { notas: '', eventos: 'eventos', dash: 'dashboard', rel: 'relatorios' };
+function tabFromHash() { const h = location.hash.replace('#', ''); return Object.keys(TAB_HASH).find(k => TAB_HASH[k] && TAB_HASH[k] === h) || 'notas'; }
+function setTab(t, { push = true } = {}) {
+  if (!TABS[t]) t = 'notas';
+  S.tab = t;
+  for (const [k, id] of Object.entries(TABS)) $('#' + id).hidden = k !== t;
+  $$('#tabs [data-tab]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === t)));
+  if (push) { try { history.replaceState(null, '', location.pathname + location.search + (TAB_HASH[t] ? '#' + TAB_HASH[t] : '')); } catch {} }
+  if (t === 'notas') lastTotal = null;
+  render();
+  if (push) window.scrollTo({ top: 0 });
 }
+function kpiHTML(items) {
+  return '<div class="kpis">' + items.map(([l, v, s, cls]) => `<div class="kpi ${cls || ''}"><span class="kpi-l">${esc(l)}</span><strong class="kpi-v">${esc(v)}</strong>${s ? `<span class="kpi-s">${esc(s)}</span>` : ''}</div>`).join('') + '</div>';
+}
+function periodChips(cur, attr) {
+  return '<div class="chips">' + yearsWithData().map(y => `<button type="button" class="chip${cur === y ? ' on' : ''}" ${attr}="${y}">${y}</button>`).join('')
+    + `<button type="button" class="chip${!cur ? ' on' : ''}" ${attr}="">Todo o período</button></div>`;
+}
+const loadingHTML = '<div class="loading">Carregando notas…</div>';
+
+/* ---------- aba Eventos ---------- */
+function renderEventos() {
+  const box = $('#vEventos');
+  if (!S.loaded) { box.innerHTML = loadingHTML; return; }
+  const per = S.evPer;
+  if (S.evSel !== null) return renderEventoDetalhe(box, per);
+  const base = applyFilter({ periodo: per }); const total = sum(base);
+  const gs = new Map(groupDim(base, 'evento').map(g => [g.id, g]));
+  const cards = allEvs().map(name => { const g = gs.get(norm(name)); return { name, key: name, total: g ? g.total : 0, n: g ? g.n : 0 }; });
+  cards.sort((a, b) => b.total - a.total);
+  const sem = gs.get('');
+  if (sem) cards.push({ name: 'Sem evento', key: '__sem__', total: sem.total, n: sem.n, sem: true });
+  const max = Math.max(1, ...cards.map(c => c.total));
+  const withSpend = cards.filter(c => c.n && !c.sem).length;
+  box.innerHTML = `
+    <div class="view-head"><div><h2>Eventos</h2><p>${esc(periodLabel(per))} · ${withSpend} ${withSpend === 1 ? 'evento' : 'eventos'} com gastos · ${brl(total)} no total</p></div>${periodChips(per, 'data-evper')}</div>
+    <div class="ev-grid">${cards.map(c => `<button type="button" class="ev-card${c.n ? '' : ' zero'}${c.sem ? ' sem' : ''}" data-ev="${esc(c.key)}">
+      <span class="ev-name">${esc(c.name)}</span>
+      <span class="ev-total">${c.n ? brl(c.total) : 'Sem gastos'}</span>
+      <span class="ev-meta">${c.n ? `${c.n} ${c.n === 1 ? 'nota' : 'notas'} · ${total ? Math.round(c.total / total * 100) : 0}% do período` : 'Nenhuma nota no período'}</span>
+      <span class="bar-track"><i style="width:${c.n ? Math.max(3, c.total / max * 100).toFixed(1) : 0}%"></i></span>
+    </button>`).join('')}</div>`;
+}
+function renderEventoDetalhe(box, per) {
+  const sem = S.evSel === '__sem__';
+  const name = sem ? 'Sem evento' : S.evSel;
+  const list = applyFilter({ periodo: per }).filter(n => sem ? !n.evento : norm(n.evento) === norm(S.evSel))
+    .sort((a, b) => (b.dataEmissao || b.mesRef || '').localeCompare(a.dataEmissao || a.mesRef || ''));
+  const total = sum(list); const ap = list.filter(n => n.status === 'a_pagar');
+  box.innerHTML = `
+    <div class="view-head"><div><button type="button" class="back" data-evback>← Todos os eventos</button><h2>${esc(name)}</h2><p>${esc(periodLabel(per))}${sem ? ' · notas lançadas antes de existir o campo evento. Abra cada uma e escolha o evento.' : ''}</p></div>${periodChips(per, 'data-evper')}</div>
+    ${kpiHTML([['Total gasto', brl(total), '', 'main'], ['Notas', String(list.length)], ['Ticket médio', list.length ? brl(total / list.length) : '—'], ['A pagar', brl(sum(ap)), ap.length ? `${ap.length} em aberto` : 'tudo pago']])}
+    ${!sem && list.length ? '<div class="rep-row"><button class="btn-ghost" type="button" data-evrep="pdf">Relatório PDF do evento</button><button class="btn-ghost" type="button" data-evrep="xlsx">Planilha Excel</button></div>' : ''}
+    ${list.length ? `<div class="dash-grid">
+      <div class="panel"><h3>Por empreendimento</h3>${barsHTML(groupDim(list, 'empreendimento'), total, { cls: 'royal', of: 'do evento' })}</div>
+      <div class="panel"><h3>Por categoria</h3>${barsHTML(groupDim(list, 'categoria'), total, { of: 'do evento' })}</div>
+      <div class="panel"><h3>Por mês</h3>${barsHTML(groupDim(list, 'mes'), total, { cls: 'white', of: 'do evento', limit: 12 })}</div>
+      <div class="panel"><h3>Fornecedores</h3>${barsHTML(groupDim(list, 'fornecedor'), total, { cls: 'white', of: 'do evento' })}</div>
+    </div>` : ''}
+    <h3 class="sec-title">Notas</h3>
+    <div class="list">${list.length ? list.map(rowHTML).join('') + `<div class="list-foot"><span>Total</span><strong>${brl(total)}</strong></div>` : '<div class="empty"><h3>Nenhuma nota neste período</h3><p>Quando uma nota for lançada com este evento, ela aparece aqui. Troque o ano acima para ver outros períodos.</p></div>'}</div>`;
+}
+
+/* ---------- aba Dashboard ---------- */
+const dashFiltro = () => { const D = S.dash; return { periodo: D.ano ? (D.mes ? `${D.ano}-${D.mes}` : D.ano) : '', evento: D.evento, empreendimento: D.empreendimento, categoria: D.categoria }; };
+function niceStep(x) { const p = Math.pow(10, Math.floor(Math.log10(x || 1))); const f = x / p; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p; }
+function evoChart(f, cw = 640) {
+  const D = S.dash; const now = todayKey();
+  const keys = D.ano ? Array.from({ length: 12 }, (_, i) => `${D.ano}-${pad(i + 1)}`) : Array.from({ length: 12 }, (_, i) => shiftMonth(now, i - 11));
+  const base = applyFilter({ ...f, periodo: D.ano || '' });
+  const totals = keys.map(k => sum(base.filter(n => n.mesRef === k)));
+  const mx = Math.max(...totals);
+  const step = niceStep((mx || 3000) / 3), top = step * 3;
+  const W = Math.round(cw), Hh = 236, L = 58, R = 8, T = 22, B = 200, pw = W - L - R, slot = pw / 12, bw = Math.min(40, slot * .6);
+  let s = `<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Saída por mês">`;
+  for (let i = 0; i <= 3; i++) {
+    const v = step * i, yy = B - (v / top) * (B - T);
+    s += `<line class="gl" x1="${L}" x2="${W - R}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}"/><text class="ax" x="${L - 8}" y="${(yy + 4).toFixed(1)}" text-anchor="end">${i ? shortBRL(v) : '0'}</text>`;
+  }
+  keys.forEach((k, i) => {
+    const t = totals[i]; const on = k === f.periodo; const h = t ? Math.max(3, t / top * (B - T)) : 2;
+    const cx = L + slot * i + slot / 2;
+    s += `<rect class="${t ? 'b' : 'b0'}${on ? ' on' : ''}" data-dm="${k}" x="${(cx - bw / 2).toFixed(1)}" y="${(B - h).toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="${t ? 4 : 1}"><title>${monthLabel(k)}: ${t ? brl(t) : 'sem notas'}</title></rect>`;
+    const lab = slot < 40 ? MES_CURTO[+k.slice(5) - 1][0].toUpperCase() : MES_CURTO[+k.slice(5) - 1] + (!D.ano && (i === 0 || k.endsWith('-01')) ? '/' + k.slice(2, 4) : '');
+    s += `<text class="ax${on ? ' on' : ''}" x="${cx.toFixed(1)}" y="${B + 18}" text-anchor="middle">${lab}</text>`;
+    if (t && (on || t === mx)) s += `<text class="vl" x="${cx.toFixed(1)}" y="${(B - h - 7).toFixed(1)}">${shortBRL(t)}</text>`;
+  });
+  return s + '</svg>';
+}
+function renderDash() {
+  const box = $('#vDash');
+  if (!S.loaded) { box.innerHTML = loadingHTML; return; }
+  const D = S.dash; const f = dashFiltro();
+  const list = applyFilter(f); const total = sum(list);
+  const cw = Math.max(300, Math.min(1240, (box.clientWidth || 900) - 38));
+  const ap = list.filter(n => n.status === 'a_pagar');
+  const months = new Set(list.map(n => n.mesRef)).size;
+  let k4;
+  if (f.periodo.length === 7) {
+    const pk = shiftMonth(f.periodo, -1); const pv = sum(applyFilter({ ...f, periodo: pk }));
+    k4 = [`Vs ${monthName(pk)}`, pv > 0 ? `${total >= pv ? '+' : '−'}${Math.abs((total - pv) / pv * 100).toFixed(0)}%` : '—', pv > 0 ? `${brl(pv)} no mês anterior` : 'sem notas no mês anterior'];
+  } else k4 = ['Média por mês', brl(months ? total / months : 0), `${months} ${months === 1 ? 'mês' : 'meses'} com notas`];
+  const anyFil = D.mes || D.evento || D.empreendimento || D.categoria;
+  box.innerHTML = `
+    <div class="view-head"><div><h2>Dashboard</h2><p>${esc(filterLabel(f))}</p></div>
+      <div class="rep-row" style="margin:0"><button class="btn-ghost" type="button" data-dashrep="pdf" ${list.length ? '' : 'disabled'}>PDF deste recorte</button><button class="btn-ghost" type="button" data-dashrep="xlsx" ${list.length ? '' : 'disabled'}>Excel</button></div></div>
+    <div class="filters">
+      <div class="field"><label for="dAno">Ano</label><select id="dAno" class="in">${opt('', 'Todos os anos', D.ano)}${yearsWithData().map(y => opt(y, y, D.ano)).join('')}</select></div>
+      <div class="field"><label for="dMes">Mês</label><select id="dMes" class="in" ${D.ano ? '' : 'disabled'}>${opt('', 'Ano inteiro', D.mes)}${MESES.map((m, i) => opt(pad(i + 1), cap(m), D.mes)).join('')}</select></div>
+      <div class="field"><label for="dEv">Evento</label><select id="dEv" class="in">${opt('', 'Todos', D.evento)}${allEvs().map(x => opt(x, x, D.evento)).join('')}</select></div>
+      <div class="field"><label for="dEmp">Empreendimento</label><select id="dEmp" class="in">${opt('', 'Todos', D.empreendimento)}${allEmps().map(x => opt(x, x, D.empreendimento)).join('')}</select></div>
+      <div class="field"><label for="dCat">Categoria</label><select id="dCat" class="in">${opt('', 'Todas', D.categoria)}${allCats().map(x => opt(x, x, D.categoria)).join('')}</select></div>
+      <button type="button" class="btn-ghost clr" data-dclear ${anyFil ? '' : 'disabled'}>Limpar filtros</button>
+    </div>
+    ${kpiHTML([['Total gasto', brl(total), '', 'main'], ['Notas', String(list.length), list.length ? `ticket médio ${brl(total / list.length)}` : ''], ['A pagar', brl(sum(ap)), ap.length ? `${ap.length} ${ap.length === 1 ? 'nota' : 'notas'} em aberto` : 'tudo pago'], k4])}
+    <div class="dash-grid">
+      <div class="panel span2 evo"><h3>Saída por mês ${D.ano ? 'em ' + D.ano : '· últimos 12 meses'}</h3>${evoChart(f, cw)}</div>
+      <div class="panel"><h3>Por evento</h3>${barsHTML(groupDim(list, 'evento'), total, { limit: 8, of: 'do total', dim: D.evento ? '' : 'evento' })}</div>
+      <div class="panel"><h3>Por empreendimento</h3>${barsHTML(groupDim(list, 'empreendimento'), total, { limit: 6, cls: 'royal', of: 'do total', dim: D.empreendimento ? '' : 'empreendimento' })}</div>
+      <div class="panel"><h3>Por categoria</h3>${barsHTML(groupDim(list, 'categoria'), total, { limit: 6, of: 'do total', dim: D.categoria ? '' : 'categoria' })}</div>
+      <div class="panel"><h3>Maiores fornecedores</h3>${barsHTML(groupDim(list, 'fornecedor'), total, { limit: 6, cls: 'white', of: 'do total' })}</div>
+    </div>
+    <h3 class="sec-title">Maiores notas do recorte</h3>
+    <div class="list">${list.length ? list.slice().sort((a, b) => (+b.valor || 0) - (+a.valor || 0)).slice(0, 6).map(rowHTML).join('') : '<div class="empty"><h3>Nenhuma nota nesse recorte</h3><p>Mude os filtros acima para ver outros períodos, eventos ou empreendimentos.</p></div>'}</div>`;
+}
+
+/* ---------- aba Relatórios ---------- */
+function specFromRel() {
+  const R = S.rel; const filtro = { periodo: R.periodo };
+  if (FDIMS.includes(R.dividir) && R.item) { filtro[R.dividir] = R.item; return { filtro, dividir: '', titulo: `${DIMS[R.dividir].label}: ${R.item}` }; }
+  return { filtro, dividir: R.dividir, titulo: `Relatório por ${DIMS[R.dividir].label.toLowerCase()}` };
+}
+function renderRel() {
+  const box = $('#vRel');
+  if (!S.loaded) { box.innerHTML = loadingHTML; return; }
+  const R = S.rel;
+  const dims = ['mes', 'ano', 'evento', 'empreendimento', 'categoria'];
+  const desc = { mes: 'Um bloco por mês, com as notas de cada um.', ano: 'Comparativo entre os anos.', evento: 'Quanto foi para cada evento.', empreendimento: 'Gastos separados por empreendimento.', categoria: 'Gráfica, mídia, brindes e as demais.' };
+  let perOpts = [['', 'Todo o período']];
+  if (R.dividir !== 'ano') {
+    perOpts = perOpts.concat(yearsWithData().map(y => [y, `Ano de ${y}`]));
+    if (R.dividir !== 'mes') perOpts = perOpts.concat(monthsWithNotes().map(m => [m, monthLabel(m)]));
+  }
+  if (!perOpts.some(o => o[0] === R.periodo)) R.periodo = perOpts.length > 1 ? perOpts[1][0] : '';
+  const itemDim = FDIMS.includes(R.dividir);
+  const items = R.dividir === 'evento' ? allEvs() : R.dividir === 'empreendimento' ? allEmps() : R.dividir === 'categoria' ? allCats() : [];
+  if (R.item && !items.some(i => norm(i) === norm(R.item))) R.item = '';
+  const spec = specFromRel();
+  const list = applyFilter(spec.filtro); const total = sum(list);
+  const gs = spec.dividir ? groupDim(list, spec.dividir) : groupDim(list, 'categoria');
+  box.innerHTML = `
+    <div class="view-head"><div><h2>Relatórios</h2><p>Monte o relatório e baixe em PDF ou Excel.</p></div></div>
+    <div class="rel-grid">
+      <div class="panel rel-form">
+        <h3>1. Dividir o relatório por</h3>
+        <div class="choice-grid">${dims.map(d => `<button type="button" class="choice${R.dividir === d ? ' on' : ''}" data-rdim="${d}" aria-pressed="${R.dividir === d}"><b>${DIMS[d].label}</b><span>${desc[d]}</span></button>`).join('')}</div>
+        <h3><label for="rPer">2. Período</label></h3>
+        <select id="rPer" class="in">${perOpts.map(([v, l]) => opt(v, l, R.periodo)).join('')}</select>
+        ${itemDim ? `<h3><label for="rItem">3. Quais ${DIMS[R.dividir].plural}</label></h3>
+        <select id="rItem" class="in">${opt('', `Todos, comparando entre si`, R.item)}${items.map(i => opt(i, i, R.item)).join('')}</select>
+        <p class="hint" style="margin-top:8px">Escolha um só para ter o relatório detalhado dele.</p>` : ''}
+      </div>
+      <div class="panel rel-prev">
+        <h3>Prévia</h3>
+        <div class="rel-title">${esc(spec.titulo)}</div>
+        <div class="rel-sub">${esc(filterLabel(spec.filtro))}</div>
+        ${kpiHTML([['Total', brl(total), '', 'main'], ['Notas', String(list.length)], spec.dividir ? [cap(DIMS[spec.dividir].plural), String(gs.length)] : ['Ticket médio', list.length ? brl(total / list.length) : '—']])}
+        ${list.length ? barsHTML(gs, total, { limit: 14, of: 'do total', cls: spec.dividir === 'empreendimento' ? 'royal' : spec.dividir === 'mes' || spec.dividir === 'ano' ? 'white' : '' }) : '<p class="empty-mini">Nenhuma nota nesse recorte. Mude o período.</p>'}
+        <div class="rep-row"><button class="btn-neon" type="button" data-relrep="pdf" ${list.length ? '' : 'disabled'}>Baixar PDF</button><button class="btn-ghost" type="button" data-relrep="xlsx" ${list.length ? '' : 'disabled'}>Baixar Excel</button></div>
+      </div>
+    </div>`;
+}
+
+/* ---------- cliques e filtros das novas abas ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-tab],[data-tabgo],[data-ev],[data-evback],[data-evper],[data-evrep],[data-dm],[data-dfil],[data-dclear],[data-dashrep],[data-rdim],[data-relrep]');
+  if (!t || t.disabled) return;
+  const ds = t.dataset;
+  if (ds.tab || ds.tabgo) { setTab(ds.tab || ds.tabgo); return; }
+  if ('evper' in ds) { S.evPer = ds.evper; renderEventos(); return; }
+  if ('evback' in ds) { S.evSel = null; renderEventos(); return; }
+  if (ds.ev) { S.evSel = ds.ev; renderEventos(); window.scrollTo({ top: 0 }); return; }
+  if (ds.evrep) { runRep(ds.evrep === 'pdf' ? gerarPDF : gerarXLSX, { filtro: { periodo: S.evPer, evento: S.evSel } }); return; }
+  if (ds.dm) {
+    const [y, m] = ds.dm.split('-');
+    if (S.dash.ano === y && S.dash.mes === m) S.dash.mes = ''; else { S.dash.ano = y; S.dash.mes = m; }
+    renderDash(); return;
+  }
+  if (ds.dfil) { const k = ds.dfil; S.dash[k] = norm(S.dash[k]) === norm(ds.val) ? '' : ds.val; renderDash(); return; }
+  if ('dclear' in ds) { Object.assign(S.dash, { mes: '', evento: '', empreendimento: '', categoria: '' }); renderDash(); return; }
+  if (ds.dashrep) { runRep(ds.dashrep === 'pdf' ? gerarPDF : gerarXLSX, { filtro: dashFiltro() }); return; }
+  if (ds.rdim) { if (S.rel.dividir === 'ano' && ds.rdim !== 'ano') S.rel.periodo = todayKey().slice(0, 4); S.rel.dividir = ds.rdim; S.rel.item = ''; renderRel(); return; }
+  if (ds.relrep) { runRep(ds.relrep === 'pdf' ? gerarPDF : gerarXLSX, specFromRel()); return; }
+});
+let dashRz; addEventListener('resize', () => { clearTimeout(dashRz); dashRz = setTimeout(() => { if (S.tab === 'dash') renderDash(); }, 200); });
+document.addEventListener('change', e => {
+  const id = e.target.id, v = e.target.value;
+  if (id === 'dAno') { S.dash.ano = v; if (!v) S.dash.mes = ''; renderDash(); }
+  else if (id === 'dMes') { S.dash.mes = v; renderDash(); }
+  else if (id === 'dEv') { S.dash.evento = v; renderDash(); }
+  else if (id === 'dEmp') { S.dash.empreendimento = v; renderDash(); }
+  else if (id === 'dCat') { S.dash.categoria = v; renderDash(); }
+  else if (id === 'rPer') { S.rel.periodo = v; renderRel(); }
+  else if (id === 'rItem') { S.rel.item = v; renderRel(); }
+});
 
 /* ---------- ajustes ---------- */
 function openSettings() {
   $('#s-budget').value = S.cfg.orcamentoMensal ? brlNum(S.cfg.orcamentoMensal) : '';
   $('#s-emps').value = (S.cfg.empreendimentos || []).join('\n');
   $('#s-cats').value = allCats().join('\n');
+  $('#s-evs').value = (S.cfg.eventos && S.cfg.eventos.length ? S.cfg.eventos : DEFAULT_EVENTOS).join('\n');
   $('#s-pass').value = '';
   $('#contaEmail').innerHTML = `Você entrou como <b>${esc(S.userEmail || '—')}</b>.`;
   showModal('mSet');
@@ -1605,8 +2019,9 @@ $('#btnLogout').addEventListener('click', async () => { try { await sb.auth.sign
 $('#btnSaveSet').addEventListener('click', async () => {
   const lines = s => [...new Set(s.split(/\n|;/).map(x => x.trim()).filter(Boolean))];
   const b = parseBRL($('#s-budget').value);
-  const cfg = { empreendimentos: lines($('#s-emps').value), categorias: lines($('#s-cats').value), orcamentoMensal: isNaN(b) || b < 0 ? 0 : Math.round(b * 100) / 100 };
+  const cfg = { empreendimentos: lines($('#s-emps').value), categorias: lines($('#s-cats').value), eventos: lines($('#s-evs').value), orcamentoMensal: isNaN(b) || b < 0 ? 0 : Math.round(b * 100) / 100 };
   if (!cfg.categorias.length) cfg.categorias = DEFAULT_CATS.slice();
+  if (!cfg.eventos.length) cfg.eventos = DEFAULT_EVENTOS.slice();
   const pass = $('#s-pass').value;
   if (pass && pass.length < 8) { toast('A nova senha precisa ter pelo menos 8 caracteres.', 'err'); return; }
   const btn = $('#btnSaveSet'); btn.disabled = true;
@@ -1622,24 +2037,21 @@ $('#btnSaveSet').addEventListener('click', async () => {
 /* ---------- eventos gerais ---------- */
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-m],[data-id],[data-act],[data-rep]'); if (!t) return;
-  if (t.dataset.m) { S.month = t.dataset.m; S.emp = ''; lastTotal = null; if (yearMenu) { yearMenu = null; } render(); return; }
+  if (t.dataset.m) { S.month = t.dataset.m; S.emp = ''; S.ev = ''; lastTotal = null; render(); return; }
   if (t.dataset.id) { openView(t.dataset.id); return; }
   const a = t.dataset.act, r = t.dataset.rep;
   if (a === 'add') openForm();
   if (a === 'settings') { hideModal('mForm'); openSettings(); }
   if (a === 'stopai' && F.ctl) F.ctl.abort();
   if (a === 'retryai') runExtraction();
-  const run = (fn, scope) => fn(scope).catch(err => toast(esc((err && err.message) || 'Não consegui gerar o arquivo.'), 'err'));
-  if (r === 'pdf') run(reportPDF, { type: 'month', key: S.month });
-  if (r === 'xlsx') run(reportXLSX, { type: 'month', key: S.month });
-  if (r === 'year') showYearMenu(t);
-  if (r === 'ypdf') run(reportPDF, { type: 'year', year: S.month.slice(0, 4) });
-  if (r === 'yxlsx') run(reportXLSX, { type: 'year', year: S.month.slice(0, 4) });
+  if (r === 'pdf') runRep(gerarPDF, { filtro: { periodo: S.month } });
+  if (r === 'xlsx') runRep(gerarXLSX, { filtro: { periodo: S.month } });
 });
 $('#btnAdd').addEventListener('click', () => openForm());
 $('#fab').addEventListener('click', () => openForm());
 let qT; $('#q').addEventListener('input', e => { clearTimeout(qT); qT = setTimeout(() => { S.q = e.target.value; renderList(); }, 120); });
 $('#fEmp').addEventListener('change', e => { S.emp = e.target.value; renderList(); });
+$('#fEv').addEventListener('change', e => { S.ev = e.target.value; renderList(); });
 
 function setBadge() {
   const b = $('#modeBadge');
@@ -1661,6 +2073,7 @@ function onConfig(c) {
   S.cfg = {
     empreendimentos: Array.isArray(c && c.empreendimentos) ? c.empreendimentos : [],
     categorias: Array.isArray(c && c.categorias) && c.categorias.length ? c.categorias : DEFAULT_CATS.slice(),
+    eventos: Array.isArray(c && c.eventos) && c.eventos.length ? c.eventos : DEFAULT_EVENTOS.slice(),
     orcamentoMensal: +(c && c.orcamentoMensal) || 0
   };
   if (S.loaded) render();
@@ -1690,6 +2103,7 @@ function startApp(session) {
   started = true;
   S.userEmail = (session && session.user && session.user.email) || '';
   setBadge(); applyWriteAccess();
+  setTab(tabFromHash(), { push: false });
   store.subscribeConfig(onConfig).catch(() => {});
   store.subscribe(onNotes, err => {
     $('#banner').innerHTML = `<div class="banner"><span>${esc((err && err.message) || 'Não consegui carregar as notas.')}</span><button type="button" onclick="location.reload()">Tentar de novo</button></div>`;
