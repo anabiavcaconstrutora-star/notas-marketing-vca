@@ -1318,7 +1318,7 @@ Regras:
 - observacao: avisos curtos (ex.: "imagem cortada", "valor líquido R$ X"). "" se nada.
 - Campo ilegível ou ausente: "".
 - Se não for um documento fiscal ou comprovante de pagamento, e_documento_fiscal = false.
-${pdfText ? '\nTexto extraído do PDF (pode estar incompleto ou fora de ordem):\n"""\n' + pdfText.slice(0, 14000) + '\n"""' : ''}`;
+${pdfText ? '\nTexto extraído do PDF (pode estar incompleto ou fora de ordem):\n"""\n' + pdfText.slice(0, 6000) + '\n"""' : ''}`;
 }
 
 async function runExtraction() {
@@ -1354,6 +1354,7 @@ async function runExtraction() {
       chave_invalida: 'A chave da Anthropic cadastrada no Supabase não foi aceita. Confira o segredo ANTHROPIC_API_KEY.',
       arquivo_grande: 'Esse arquivo é pesado demais para leitura automática. Preencha os campos à mão.',
       sessao: 'Sua sessão expirou. Saia e entre de novo.',
+      limite: 'A leitura automática chegou ao limite de gasto do mês. Preencha os campos à mão. Ela volta sozinha no próximo mês.',
       jwt_gateway: 'O Supabase bloqueou a leitura. Na função "ler-nota", abra Settings e desligue "Verify JWT". Por enquanto, preencha à mão.',
       nothing: 'Não encontrei conteúdo legível neste PDF. Preencha os campos à mão.'
     }[code] || `A leitura falhou${e && e.message ? ' (' + esc(e.message) + ')' : ''}. <button type="button" data-act="retryai">Tentar de novo</button> ou preencha à mão.`;
@@ -1363,15 +1364,29 @@ async function runExtraction() {
   }
 }
 
+// Imagem reduzida só para a leitura (o arquivo guardado continua em boa resolução).
+// Menos pixels = menos tokens = leitura bem mais barata.
+async function shrinkForAI(src, maxEdge = 1400) {
+  let img = src, w, h;
+  if (!(src instanceof HTMLCanvasElement)) { img = await createImageBitmap(src); }
+  w = img.width; h = img.height;
+  const k = Math.min(1, maxEdge / Math.max(w, h));
+  const c = document.createElement('canvas'); c.width = Math.round(w * k); c.height = Math.round(h * k);
+  const ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height); ctx.drawImage(img, 0, 0, c.width, c.height);
+  return canvasToBlob(c, 'image/jpeg', .82);
+}
 async function extractFn(signal) {
   let tipo = 'img', dados = '', pdfText = '';
   const b64 = async b => (await blobToDataURL(b)).split(',')[1];
   if (F.kind === 'pdf') {
-    if (F.blob.size <= 4.5 * 1024 * 1024) { tipo = 'pdf'; dados = await b64(F.blob); }
-    else if (F.pdfCanvases.length) { tipo = 'img'; dados = await b64(await canvasToBlob(F.pdfCanvases[0])); pdfText = F.pdfText; }
-    else if (F.pdfText.length > 40) { tipo = 'texto'; pdfText = F.pdfText; }
+    // PDF com texto (NF-e/NFS-e digitais): manda só o texto, que é o jeito mais barato.
+    // PDF escaneado: manda só a 1ª página como imagem reduzida.
+    pdfText = (F.pdfText || '').trim();
+    if (pdfText.length >= 400) tipo = 'texto';
+    else if (F.pdfCanvases.length) { tipo = 'img'; dados = await b64(await shrinkForAI(F.pdfCanvases[0])); }
+    else if (pdfText.length > 40) tipo = 'texto';
     else throw { code: 'nothing' };
-  } else { dados = await b64(F.blob); }
+  } else { dados = await b64(await shrinkForAI(F.blob)); }
   let res;
   try { res = await sb.functions.invoke('ler-nota', { body: { tipo, dados, prompt: buildPrompt(pdfText) } }); }
   catch (e) { throw { code: 'sem_funcao' }; }
@@ -1380,12 +1395,12 @@ async function extractFn(signal) {
   if (error) {
     let body = null; try { body = error.context && typeof error.context.json === 'function' ? await error.context.json() : null; } catch {}
     const st = error.context && error.context.status;
-    if (body && body.error) throw { code: body.error, message: body.detalhe };
+    if (body && body.error) throw { code: /usage limit|spend limit/i.test(body.detalhe || '') ? 'limite' : body.error, message: body.detalhe };
     if (st === 401) throw { code: 'jwt_gateway' };
     if (st === 404 || error.name === 'FunctionsFetchError' || error.name === 'FunctionsRelayError') throw { code: 'sem_funcao' };
     throw { code: 'api', message: error.message };
   }
-  if (data && data.error) throw { code: data.error, message: data.detalhe };
+  if (data && data.error) throw { code: /usage limit|spend limit/i.test(data.detalhe || '') ? 'limite' : data.error, message: data.detalhe };
   return parseLooseJSON((data && data.texto) || '');
 }
 function parseLooseJSON(t) {
